@@ -1,4 +1,4 @@
-<?php
+	<?php
 	/**
 	 * 
 	 */
@@ -6,11 +6,11 @@
 		
 		public function __construct() {
 			parent::__construct(array(
-				'name'		   => __( 'Module Shivam', 'fl-builder' ),
-				'description'  => __( 'You gonna love it', 'fl-builder'),
-				'group'		   => __( 'Group Shivam', 'fl-builder'),
-				'category'	   => __( 'Category Shivam', 'fl-builder'),
-				'dir'		   => MODULE_SHIVAM_DIR . 'sr-module/',
+				'name'		   => __( 'Module Shivam', 'module-shivam' ),
+				'description'  => __( 'You gonna love it', 'module-shivam'),
+				'category'	   => __( 'Category Shivam', 'module-shivam'),
+				'dir'		   => MODULE_SHIVAM_DIR . 'modules/sr-module/',
+				'url'          => MODULE_SHIVAM_URL . 'modules/sr-module/',
 				'enabled'	   => true,
 				'editor_export'=> true,
 			));
@@ -18,33 +18,162 @@
 	}
 
 	FLBuilder::register_module( 'SrModuleClass', array(
-		'sr-tab-1'      => array(
-			'title'	       => __( 'SR Tab 1', 'fl-builder'),
+		'general'      => array(
+			'title'	       => __( 'General', 'module-shivam'),
 			'sections'	   => array(
-				'sr-section-1' => array(
-					'title'			=> __( 'SR Section 1', 'fl-builder' ),
+				'heading_description' => array(
+					'title'			=> __( 'Heading & Description', 'module-shivam' ),
 					'fields'		=> array(
-						'sr-field-1'    => array(
-							'type'			=> 'text',
-							'label'			=> __( 'Text Field 1', 'fl-builder' ),
+						'heading'          => array(
+							'type'        => 'text',
+							'label'       => __( 'Title', 'sr-module' ),
+							'default'     => '',
+							'connections' => array( 'string', 'html' ),
+							'preview'     => array(
+								'type'      => 'text',
+								'selector'  => '.sr-heading',
+								'important' => true,
+							),
 						),
-						'sr-field-2'    => array(
-							'type'			=> 'text',
-							'label'			=> __( 'Text Field 2', 'fl-builder' ),
+						'textarea_field'    => array(
+							'type'			=> 'editor',
+							'label'			=> __( 'Textarea Field', 'module-shivam' ),
+							'default'       => '',
+							'placeholder'   => __('Placeholder Text', 'module-shivam'),
+							'rows'          => '6',
+							'preview'         => array(
+								'type'             => 'text',
+								'selector'         => '.sr-text',
+							),
+						),
+						'image_type' => array(
+							'type'    => 'select',
+							'label'   => __( 'Image Type', 'module-shivam' ),
+							'default' => 'icon',
+							'options' => array(
+								'icon'  => __( 'Icon', 'module-shivam' ),
+								'photo' => __( 'Photo', 'module-shivam' ),
+							),
+							'toggle'  => array(
+								'icon'  => array(
+									'sections' => array( 'Icons' ),
+								),
+								'photo' => array(
+									'sections' => array( 'Images' ),
+								),
+							),
 						),
 					),
 				),
-				'sr-section-2' => array(
-					'title'			=> __( 'SR Section 2', 'fl-builder' ),
+				'Icons' => array(
+					'title'			=> __( 'Icons', 'module-shivam' ),
+					'fields'	    => array(
+						'icon' 			=> array(
+							'type' 	       =>'icon',
+							'label'        =>__( 'Icon', 'module-shivam' ),
+							'default'	   =>'',
+							'show_remove'  =>true,
+						),
+						'icon_size'     => array(
+							'type'	       => 'unit',
+							'label'		   => __('Size', 'module-shivam' ),
+							'preview'     => array(
+								'type'     => 'css',
+								'selector' => '.sr-icon i',
+								'property' => 'font-size',
+								'unit'     => 'px',
+							),
+						),
+						'icon-align'     => array(
+							'type'			=> 'select',
+							'label'			=> __( 'Alignment', 'module-shivam' ),
+							'default'		=> 'left',
+							'options'		=> array(
+								'left'			=> __( 'Left', 'module-shivam' ),
+								'right'			=> __( 'Right', 'module-shivam' ),
+								'center'		=> __( 'Center', 'module-shivam' ),
+							),
+							'preview'	  => array(
+								'type'		=> 'css',
+								'selector'  => '.sr-icon-wrap',
+								'property'	=> 'text-align',
+							),
+						),
+					),
+				),
+				'Images' => array(
+					'title'			=> __( 'Images', 'module-shivam' ),
+					'fields' 		=> array(
+						'photo' 		=> array(
+							'type' 			=> 'photo',
+							'label' 		=> __( 'Photo', 'module-shivam' ),
+							'show_remove'   => true,
+						),
+						'img_size'     => array(
+							'type'        => 'unit',
+							'label'       => __( 'Size', 'module-shivam' ),
+							'preview'     => array(
+								'type'     => 'css',
+								'selector' => '.sr-image',
+								'property' => 'width',
+								'unit'     => 'px',
+							),
+						),
+						'image-align'     => array(
+							'type'			=> 'select',
+							'label'			=> __( 'Alignment', 'module-shivam' ),
+							'default'		=> 'left',
+							'options'		=> array(
+								'left'			=> __( 'Left', 'module-shivam' ),
+								'right'			=> __( 'Right', 'module-shivam' ),
+								'center'		=> __( 'Center', 'module-shivam' ),
+							),
+							'preview'	  => array(
+								'type'		=> 'css',
+								'selector'  => '.sr-image-wrap',
+								'property'	=> 'text-align',
+							),
+						),
+
+					),
 				),
 			),
 		),
-		'sr-tab-2'      => array(
-			'title'	       => __( 'SR Tab 2', 'fl-builder'),
+		'typography'      => array(
+			'title'	       => __( 'Typography', 'module-shivam' ),
+			'sections'	   => array(
+				'heading_typography' => array(
+					'title'  => __( 'Heading Typography', 'module-shivam' ),
+					'fields' => array(
+						'tag_select'    => array(
+							'type'		=> 'select',
+							'label'		=> __( 'Tag', 'module-shivam' ),
+							'default'   => 'h4',
+							'options'	=> array(
+								'h1'	=> __( 'H1', 'module-shivam' ),
+								'h2'	=> __( 'H2', 'module-shivam' ),
+								'h3'	=> __( 'H3', 'module-shivam' ),
+								'h4'	=> __( 'H4', 'module-shivam' ),
+								'h5'	=> __( 'H5', 'module-shivam' ),
+								'h6'	=> __( 'H6', 'module-shivam' ),
+								'p'		=> __( 'p', 'module-shivam' ),
+								'span'	=> __( 'span', 'module-shivam' ),
+							),
+						),
+						'heading_font_type'   => array(
+							'type'  => 'typography',
+							'label' => __( 'Typography', 'module-shivam' ),
+							'responsive' => true,
+							'preview'    => array(
+								'type'     => 'css',
+								'selector' => '.sr-heading',
+								'important'=> true,
+							),
+						),
+					),
 
+				),
+			),
 		),
-
 	) );
-
-
 	?>
