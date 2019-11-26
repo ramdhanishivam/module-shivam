@@ -1,9 +1,15 @@
 	<?php
 	/**
-	 * 
+	 *  Function that initializes Module Shivam
+	 *
+	 *  @class SrModuleClass
 	 */
 	class SrModuleClass extends FLBuilderModule {
-		
+		/**
+		 * Constructor function that constructs default values for the Mdoule Shivam
+		 *
+		 * @method __construct
+		 */
 		public function __construct() {
 			parent::__construct(array(
 				'name'		   => __( 'Module Shivam', 'module-shivam' ),
@@ -17,6 +23,9 @@
 		}
 	}
 
+	/**
+	 * Register the Module
+	 */
 	FLBuilder::register_module( 'SrModuleClass', array(
 		'general'      => array(
 			'title'	       => __( 'General', 'module-shivam'),
@@ -43,7 +52,7 @@
 							'rows'          => '6',
 							'preview'         => array(
 								'type'             => 'text',
-								'selector'         => '.sr-text',
+								'selector'         => '.sr-description',
 							),
 						),
 						'image_type' => array(
@@ -171,9 +180,48 @@
 								'important'=> true,
 							),
 						),
+						'heading_color'     => array(
+							'type'	=> 'color',
+							'label' => __( 'Color', 'module-shivam' ),
+							'default' => '',
+							'show_reset' => true,
+							'preview'	 => array(
+								'type' => 'css',
+								'selector' => '.sr-heading',
+								'property' => 'color',
+							),
+						),
 					),
 
 				),
+				'description_typography' => array(
+					'title'  => __( 'Description Typography', 'module-shivam' ),
+					'fields' => array(
+						'description_font_type'   => array(
+							'type'  => 'typography',
+							'label' => __( 'Typography', 'module-shivam' ),
+							'responsive' => true,
+							'preview'    => array(
+								'type'     => 'css',
+								'selector' => '.sr-description',
+								'important'=> true,
+							),
+						),
+						'description_color'     => array(
+							'type'	=> 'color',
+							'label' => __( 'Color', 'module-shivam' ),
+							'default' => '',
+							'show_reset' => true,
+							'preview'	 => array(
+								'type' => 'css',
+								'selector' => '.sr-description',
+								'property' => 'color',
+							),
+						),
+					),
+
+				),
+
 			),
 		),
 	) );

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Render the frontend content.
+ *
+ * @package Module Shivam
+ */
 ?>
 <div class="sr-image-wrap">
 	<img class="sr-image" src="<?php echo($settings->photo_src) ?>"/>
@@ -13,6 +18,6 @@
 	echo $settings->heading;
 	echo '</'. $settings->tag_select.'>';?>
 </div>
-<div class="sr-text">
+<div class="sr-description">
 	<?php echo $settings->textarea_field; ?>
 </div>
