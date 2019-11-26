@@ -84,7 +84,7 @@
 								'unit'     => 'px',
 							),
 						),
-						'icon-align'     => array(
+						'icon_align'     => array(
 							'type'			=> 'select',
 							'label'			=> __( 'Alignment', 'module-shivam' ),
 							'default'		=> 'left',
@@ -109,7 +109,7 @@
 							'label' 		=> __( 'Photo', 'module-shivam' ),
 							'show_remove'   => true,
 						),
-						'img_size'     => array(
+						'image_size'     => array(
 							'type'        => 'unit',
 							'label'       => __( 'Size', 'module-shivam' ),
 							'preview'     => array(
@@ -119,7 +119,7 @@
 								'unit'     => 'px',
 							),
 						),
-						'image-align'     => array(
+						'image_align'     => array(
 							'type'			=> 'select',
 							'label'			=> __( 'Alignment', 'module-shivam' ),
 							'default'		=> 'left',
@@ -132,6 +132,7 @@
 								'type'		=> 'css',
 								'selector'  => '.sr-image-wrap',
 								'property'	=> 'text-align',
+								'important' => true,
 							),
 						),
 

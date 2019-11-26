@@ -1,7 +1,6 @@
 <?php
-
 ?>
-<div class="sr-imgage-wrap">
+<div class="sr-image-wrap">
 	<img class="sr-image" src="<?php echo($settings->photo_src) ?>"/>
 </div>
 <div class="sr-icon-wrap">
