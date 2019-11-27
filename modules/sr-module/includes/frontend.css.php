@@ -25,7 +25,6 @@
 	color: #<?php echo $settings->heading_color; ?>;
 }
 
-
 .sr-description {
 	color: #<?php echo $settings->description_color; ?>;
 }
@@ -38,6 +37,7 @@
 				'selector'     => ".sr-heading-wrap $settings->tag_select",
 			)
 		);
+	
 	FLBuilderCSS::typography_field_rule(
 			array(
 				'settings'     => $settings,
@@ -47,3 +47,6 @@
 		);
 ?>
 
+=======
+}
+>>>>>>> parent of c8b7bfe... feat: font property added
