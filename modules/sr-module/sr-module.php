@@ -191,6 +191,36 @@
 								'property' => 'color',
 							),
 						),
+						'heading_font_family'      => array(
+							'type'    => 'font',
+							'label'   => __( 'Font Family', 'module-shivam' ),
+							'default' => array(
+								'family' => 'Default',
+								'weight' => 'Default',
+							),
+							'preview' => array(
+								'type'     => 'font',
+								'selector' => '.sr-heading',
+							),
+						),
+						'heading_font_size_unit'   => array(
+							'type'        => 'unit',
+							'label'       => __( 'Font Size', 'module-shivam' ),
+							'description' => 'px',
+							'preview'     => array(
+								'type'     => 'css',
+								'selector' => '.sr-heading',
+								'property' => 'font-size',
+								'unit'     => 'px',
+							),
+							'responsive'  => array(
+								'placeholder' => array(
+									'default'    => '',
+									'medium'     => '',
+									'responsive' => '',
+								),
+							),
+						),
 					),
 
 				),
@@ -216,6 +246,36 @@
 								'type' => 'css',
 								'selector' => '.sr-description',
 								'property' => 'color',
+							),
+						),
+						'description_font_family'      => array(
+							'type'    => 'font',
+							'label'   => __( 'Font Family', 'module-shivam' ),
+							'default' => array(
+								'family' => 'Default',
+								'weight' => 'Default',
+							),
+							'preview' => array(
+								'type'     => 'font',
+								'selector' => '.sr-description',
+							),
+						),
+						'description_font_size_unit'   => array(
+							'type'        => 'unit',
+							'label'       => __( 'Font Size', 'module-shivam' ),
+							'description' => 'px',
+							'preview'     => array(
+								'type'     => 'css',
+								'selector' => '.sr-description',
+								'property' => 'font-size',
+								'unit'     => 'px',
+							),
+							'responsive'  => array(
+								'placeholder' => array(
+									'default'    => '',
+									'medium'     => '',
+									'responsive' => '',
+								),
 							),
 						),
 					),
