@@ -4,47 +4,64 @@
  *
  * @package  Module Shivam
  */
+
+FLBuilderCSS::rule( array(
+	'selector'	=> ".sr-icon-wrap",
+	'props'		=> array(
+		'text-align'		=> $settings->icon_align,
+	),
+) );
+
+FLBuilderCSS::rule( array(
+	'selector'	=> ".sr-image-wrap",
+	'props'		=> array(
+		'text-align'		=> $settings->image_align,
+	),
+) );
+
+FLBuilderCSS::responsive_rule( array(
+	'settings'	    => $settings,
+	'setting_name'  => 'image_size',
+	'selector'		=> ".sr-image",
+	'prop'			=> 'width',
+) );
+
+FLBuilderCSS::responsive_rule( array(
+	'settings'	    => $settings,
+	'setting_name'  => 'icon_size',
+	'selector'		=> ".sr-icon",
+	'prop'			=> 'font-size',
+) );
+
+FLBuilderCSS::rule( array(
+	'selector'	=> ".sr-description",
+	'props'		=> array(
+		'color'		=> $settings->description_color,
+	),
+) );
+
+FLBuilderCSS::rule( array(
+	'selector'	=> ".sr-heading-wrap $settings->tag_select",
+	'props'		=> array(
+		'color'		=> $settings->heading_color,
+	),
+) );
+
+FLBuilderCSS::typography_field_rule(
+	array(
+		'settings'     => $settings,
+		'setting_name' => 'heading_font_type',
+		'selector'     => ".sr-heading-wrap $settings->tag_select",
+	)
+);
+
+FLBuilderCSS::typography_field_rule(
+	array(
+		'settings'     => $settings,
+		'setting_name' => 'description_font_type',
+		'selector'     => ".sr-description",
+	)
+);
 ?>
-.sr-icon i{
-	font-size: <?php echo $settings->icon_size; ?>px;
-}
 
-.sr-icon-wrap{
-	text-align: <?php echo $settings->icon_align; ?>;
-}
-
-.sr-image {
-	width: <?php echo $settings->image_size; ?>px;
-}
-
-.sr-image-wrap {
-	text-align: <?php echo $settings->image_align; ?>;
-}
-
-.sr-heading-wrap <?php echo $settings->tag_select; ?> {
-	color: #<?php echo $settings->heading_color; ?>;
-}
-
-.sr-description {
-	color: #<?php echo $settings->description_color; ?>;
-}
-
-<?php
-	FLBuilderCSS::typography_field_rule(
-			array(
-				'settings'     => $settings,
-				'setting_name' => 'heading_font_type',
-				'selector'     => ".sr-heading-wrap $settings->tag_select",
-			)
-		);
-
-	FLBuilderCSS::typography_field_rule(
-			array(
-				'settings'     => $settings,
-				'setting_name' => 'description_font_type',
-				'selector'     => ".sr-description",
-			)
-		);
-?>
-}
 

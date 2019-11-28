@@ -53,6 +53,7 @@
 							'preview'         => array(
 								'type'             => 'text',
 								'selector'         => '.sr-description',
+								'important' => true,
 							),
 						),
 						'image_type' => array(
@@ -86,11 +87,17 @@
 						'icon_size'     => array(
 							'type'	       => 'unit',
 							'label'		   => __('Size', 'module-shivam' ),
+							'responsive'  => true,
+							'units'      => array(
+								'px',
+								'vw',
+								'%',
+							),
 							'preview'     => array(
 								'type'     => 'css',
 								'selector' => '.sr-icon i',
 								'property' => 'font-size',
-								'unit'     => 'px',
+								'important' => true,
 							),
 						),
 						'icon_align'     => array(
@@ -106,6 +113,7 @@
 								'type'		=> 'css',
 								'selector'  => '.sr-icon-wrap',
 								'property'	=> 'text-align',
+								'important' => true,
 							),
 						),
 					),
@@ -121,11 +129,17 @@
 						'image_size'     => array(
 							'type'        => 'unit',
 							'label'       => __( 'Size', 'module-shivam' ),
+							'responsive'  => true,
+							'units'      => array(
+								'px',
+								'vw',
+								'%',
+							),
 							'preview'     => array(
 								'type'     => 'css',
 								'selector' => '.sr-image',
 								'property' => 'width',
-								'unit'     => 'px',
+								'important' => true,
 							),
 						),
 						'image_align'     => array(
@@ -177,7 +191,7 @@
 							'preview'    => array(
 								'type'     => 'css',
 								'selector' => '.sr-heading',
-								'important'=> true,
+								'important' => true,
 							),
 						),
 						'heading_color'     => array(
@@ -189,6 +203,7 @@
 								'type' => 'css',
 								'selector' => '.sr-heading',
 								'property' => 'color',
+								'important' => true,
 							),
 						),
 					),
@@ -204,7 +219,7 @@
 							'preview'    => array(
 								'type'     => 'css',
 								'selector' => '.sr-description',
-								'important'=> true,
+								'important' => true,
 							),
 						),
 						'description_color'     => array(
@@ -216,6 +231,7 @@
 								'type' => 'css',
 								'selector' => '.sr-description',
 								'property' => 'color',
+								'important' => true,
 							),
 						),
 					),
