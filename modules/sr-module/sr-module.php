@@ -41,7 +41,6 @@
 							'preview'     => array(
 								'type'      => 'text',
 								'selector'  => '.sr-heading',
-								'important' => true,
 							),
 						),
 						'textarea_field'    => array(
@@ -53,7 +52,6 @@
 							'preview'         => array(
 								'type'             => 'text',
 								'selector'         => '.sr-description',
-								'important' => true,
 							),
 						),
 						'image_type' => array(
@@ -97,7 +95,6 @@
 								'type'     => 'css',
 								'selector' => '.sr-icon i',
 								'property' => 'font-size',
-								'important' => true,
 							),
 						),
 						'icon_align'     => array(
@@ -113,7 +110,6 @@
 								'type'		=> 'css',
 								'selector'  => '.sr-icon-wrap',
 								'property'	=> 'text-align',
-								'important' => true,
 							),
 						),
 					),
@@ -139,7 +135,6 @@
 								'type'     => 'css',
 								'selector' => '.sr-image',
 								'property' => 'width',
-								'important' => true,
 							),
 						),
 						'image_align'     => array(
@@ -155,7 +150,6 @@
 								'type'		=> 'css',
 								'selector'  => '.sr-image-wrap',
 								'property'	=> 'text-align',
-								'important' => true,
 							),
 						),
 
@@ -191,7 +185,6 @@
 							'preview'    => array(
 								'type'     => 'css',
 								'selector' => '.sr-heading',
-								'important' => true,
 							),
 						),
 						'heading_color'     => array(
@@ -203,7 +196,6 @@
 								'type' => 'css',
 								'selector' => '.sr-heading',
 								'property' => 'color',
-								'important' => true,
 							),
 						),
 					),
@@ -219,7 +211,6 @@
 							'preview'    => array(
 								'type'     => 'css',
 								'selector' => '.sr-description',
-								'important' => true,
 							),
 						),
 						'description_color'     => array(
@@ -231,7 +222,6 @@
 								'type' => 'css',
 								'selector' => '.sr-description',
 								'property' => 'color',
-								'important' => true,
 							),
 						),
 					),
