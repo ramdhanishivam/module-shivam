@@ -230,5 +230,116 @@
 
 			),
 		),
+		'style'		=> array(
+			'title'		=> __( 'Style', 'module-shivam' ),
+			'sections'	=> array(
+				'background_color'	=> array(
+					'title'	 => __( 'Background COlor', 'module-shivam' ),
+					'fields'	=> array(
+						'bg_color' => array(
+							'type' => 'color',
+							'label' =>  __( 'Background COlor', 'module-shivam' ),
+							'default' => '',
+							'show_reset' => true,
+							'preview'	=> array(
+								'type'	=> 'css',
+								'selector' => '.main-box',
+								'property' => 'background',
+							),
+						),
+					),
+				),
+				'heading_margin'	=> array(
+					'title'	 => __( 'Heading Margin', 'module-shivam' ),
+					'fields'	=> array(
+						'heading_margin_top' => array(
+							'type'	=> 'unit',
+							'label'	=> __( 'Top', 'module-shivam' ),
+							'default'	=> '',
+							'placeholder'	=> 0,
+							'slider'		=> array(
+								'px'	=> array(
+									'min' => 0,
+									'max' => 1000,
+									'step' => 10,
+								),
+							),
+							'units' => array( 'px' ),
+							'preview' => array(
+								'type'	=> 'css',
+								'selector' => '.sr-heading',
+								'property'	=> 'margin-top',
+								'unit'		=> 'px',
+							),
+						),
+						'heading_margin_bottom' => array(
+							'type'	=> 'unit',
+							'label'	=> __( 'bottom', 'module-shivam' ),
+							'default'	=> '',
+							'placeholder'	=> 0,
+							'slider'		=> array(
+								'px'	=> array(
+									'min' => 0,
+									'max' => 1000,
+									'step' => 10,
+								),
+							),
+							'units' => array( 'px' ),
+							'preview' => array(
+								'type'	=> 'css',
+								'selector' => '.sr-heading',
+								'property'	=> 'margin-bottom',
+								'unit'		=> 'px',
+							),
+						),
+					),
+				),
+				'description_margin' => array(
+					'title'	 => __( 'Description Margin', 'module-shivam' ),
+					'fields'	=> array(
+						'description_margin_top' => array(
+							'type'	=> 'unit',
+							'label'	=> __( 'Top', 'module-shivam' ),
+							'default'	=> '',
+							'placeholder'	=> 0,
+							'slider'		=> array(
+								'px'	=> array(
+									'min' => 0,
+									'max' => 1000,
+									'step' => 10,
+								),
+							),
+							'units' => array( 'px' ),
+							'preview' => array(
+								'type'	=> 'css',
+								'selector' => '.sr-description',
+								'property'	=> 'margin-top',
+								'unit'		=> 'px',
+							),
+						),
+						'description_margin_bottom' => array(
+							'type'	=> 'unit',
+							'label'	=> __( 'Top', 'module-shivam' ),
+							'default'	=> '',
+							'placeholder'	=> 0,
+							'slider'		=> array(
+								'px'	=> array(
+									'min' => 0,
+									'max' => 1000,
+									'step' => 10,
+								),
+							),
+							'units' => array( 'px' ),
+							'preview' => array(
+								'type'	=> 'css',
+								'selector' => '.sr-description',
+								'property'	=> 'margin-bottom',
+								'unit'		=> 'px',
+							),
+						),
+					),
+				),
+			),
+		),
 	) );
 	?>
