@@ -4,6 +4,20 @@
  *
  * @package  Module Shivam
  */
+?>
+
+.fl-node-<?php echo $id; ?> .sr-heading-wrap <?php echo $settings->tag_select; ?> {
+	margin-top: <?php echo $settings->heading_margin_top; ?>px;
+	margin-bottom: <?php echo $settings->heading_margin_bottom; ?>px;
+}
+
+.fl-node-<?php echo $id; ?> .sr-description {
+	margin-top: <?php echo $settings->description_margin_top; ?>px;
+	margin-bottom: <?php echo $settings->description_margin_bottom; ?>px;
+}
+
+<?php
+
 FLBuilderCSS::rule( array(
 	'selector'	=> ".fl-node-$id .main-box",
 	'props'		=> array(
@@ -43,8 +57,6 @@ FLBuilderCSS::rule( array(
 	'selector'	=> ".fl-node-$id .sr-description",
 	'props'		=> array(
 		'color'		=> $settings->description_color,
-		'margin-top' => $settings->description_margin_top,
-		'margin-bottom' => $settings->description_margin_bottom,
 	),
 ) );
 
@@ -52,8 +64,6 @@ FLBuilderCSS::rule( array(
 	'selector'	=> ".fl-node-$id .sr-heading",
 	'props'		=> array(
 		'color'		=> $settings->heading_color,
-		'margin-top' => $settings->heading_margin_top,
-		'margin-bottom' => $settings->heading_margin_bottom,
 	),
 ) );
 	
