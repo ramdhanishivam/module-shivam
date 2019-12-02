@@ -4,6 +4,26 @@
  *
  * @package  Module Shivam
  */
+?>
+
+.fl-node-<?php echo $id; ?> .sr-heading-wrap <?php echo $settings->tag_select; ?> {
+	margin-top: <?php echo $settings->heading_margin_top; ?>px;
+	margin-bottom: <?php echo $settings->heading_margin_bottom; ?>px;
+}
+
+.fl-node-<?php echo $id; ?> .sr-description {
+	margin-top: <?php echo $settings->description_margin_top; ?>px;
+	margin-bottom: <?php echo $settings->description_margin_bottom; ?>px;
+}
+
+<?php
+
+FLBuilderCSS::rule( array(
+	'selector'	=> ".fl-node-$id .main-box",
+	'props'		=> array(
+		'background-color'	=> $settings->bg_color,
+	),
+) );
 
 FLBuilderCSS::rule( array(
 	'selector'	=> ".fl-node-$id .sr-icon-wrap",
@@ -46,7 +66,7 @@ FLBuilderCSS::rule( array(
 		'color'		=> $settings->heading_color,
 	),
 ) );
-
+	
 FLBuilderCSS::typography_field_rule(
 	array(
 		'settings'     => $settings,
