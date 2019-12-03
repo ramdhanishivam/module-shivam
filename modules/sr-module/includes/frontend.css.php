@@ -6,14 +6,35 @@
  */
 ?>
 
+<?php if ($settings->img_icon_position === 'left' ) { ?>
+	.fl-node-<?php echo $id; ?> .main-box  .<?php echo $settings->img_icon_position; ?> {
+	display: flex;
+}
+<?php } ?>
+
+<?php if ($settings->img_icon_position === 'right' ) { ?>
+	.fl-node-<?php echo $id; ?> .main-box  .<?php echo $settings->img_icon_position; ?> {
+	display: flex;
+	flex-flow: row-reverse;
+}
+<?php } ?>
+
+
 .fl-node-<?php echo $id; ?> .sr-heading-wrap <?php echo $settings->tag_select; ?> {
-	margin-top: <?php echo $settings->heading_margin_top; ?>px;
-	margin-bottom: <?php echo $settings->heading_margin_bottom; ?>px;
+margin-top: <?php echo $settings->heading_margin_top; ?>px;
+margin-bottom: <?php echo $settings->heading_margin_bottom; ?>px;
 }
 
 .fl-node-<?php echo $id; ?> .sr-description {
-	margin-top: <?php echo $settings->description_margin_top; ?>px;
-	margin-bottom: <?php echo $settings->description_margin_bottom; ?>px;
+margin-top: <?php echo $settings->description_margin_top; ?>px;
+margin-bottom: <?php echo $settings->description_margin_bottom; ?>px;
+}
+
+.fl-node-<?php echo $id; ?> .sr-imgicon-wrap {
+margin-top: <?php echo $settings->imgicon_margin_top; ?>px;
+margin-bottom: <?php echo $settings->imgicon_margin_bottom; ?>px;
+margin-left: <?php echo $settings->imgicon_margin_left; ?>px;
+margin-right: <?php echo $settings->imgicon_margin_right; ?>px;
 }
 
 <?php
@@ -66,7 +87,7 @@ FLBuilderCSS::rule( array(
 		'color'		=> $settings->heading_color,
 	),
 ) );
-	
+
 FLBuilderCSS::typography_field_rule(
 	array(
 		'settings'     => $settings,

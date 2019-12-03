@@ -234,17 +234,117 @@
 			'title'		=> __( 'Style', 'module-shivam' ),
 			'sections'	=> array(
 				'background_color'	=> array(
-					'title'	 => __( 'Background COlor', 'module-shivam' ),
+					'title'	 => __( 'Background Color', 'module-shivam' ),
 					'fields'	=> array(
 						'bg_color' => array(
 							'type' => 'color',
-							'label' =>  __( 'Background COlor', 'module-shivam' ),
+							'label' =>  __( 'Background Color', 'module-shivam' ),
 							'default' => '',
 							'show_reset' => true,
 							'preview'	=> array(
 								'type'	=> 'css',
 								'selector' => '.main-box',
 								'property' => 'background',
+							),
+						),
+					),
+				),
+				'pos_image_icon'	=> array(
+					'title'		=> __( 'Image / Icon  Alignment ', 'module-shivam' ),
+					'fields'	=> array(
+						'img_icon_position' => array(
+							'type'		=> 'select',
+							'label'		=> __( 'Position', 'module-shivam' ),
+							'default'	=> 'normal',
+							'options'	=> array(
+								'normal' 	  => __( 'Normal', 'module-shivam' ),
+								'left'        => __( 'Left of Text and Heading', 'module-shivam' ),
+								'right'       => __( 'Right of Text and Heading', 'module-shivam' ),
+							),
+						),
+					),
+				),
+				'imgicon_margin'	=> array(
+					'title'	 => __( 'Image / Icon  Margin', 'module-shivam' ),
+					'fields'	=> array(
+						'imgicon_margin_top' => array(
+							'type'	=> 'unit',
+							'label'	=> __( 'Top', 'module-shivam' ),
+							'default'	=> '',
+							'placeholder'	=> 0,
+							'slider'		=> array(
+								'px'	=> array(
+									'min' => 0,
+									'max' => 1000,
+									'step' => 10,
+								),
+							),
+							'units' => array( 'px' ),
+							'preview' => array(
+								'type'	=> 'css',
+								'selector' => '.sr-imgicon-wrap',
+								'property'	=> 'margin-top',
+								'unit'		=> 'px',
+							),
+						),
+						'imgicon_margin_bottom' => array(
+							'type'	=> 'unit',
+							'label'	=> __( 'Bottom', 'module-shivam' ),
+							'default'	=> '',
+							'placeholder'	=> 0,
+							'slider'		=> array(
+								'px'	=> array(
+									'min' => 0,
+									'max' => 1000,
+									'step' => 10,
+								),
+							),
+							'units' => array( 'px' ),
+							'preview' => array(
+								'type'	=> 'css',
+								'selector' => '.sr-imgicon-wrap',
+								'property'	=> 'margin-bottom',
+								'unit'		=> 'px',
+							),
+						),
+						'imgicon_margin_left' => array(
+							'type'	=> 'unit',
+							'label'	=> __( 'Left', 'module-shivam' ),
+							'default'	=> '',
+							'placeholder'	=> 0,
+							'slider'		=> array(
+								'px'	=> array(
+									'min' => 0,
+									'max' => 1000,
+									'step' => 10,
+								),
+							),
+							'units' => array( 'px' ),
+							'preview' => array(
+								'type'	=> 'css',
+								'selector' => '.sr-imgicon-wrap',
+								'property'	=> 'margin-left',
+								'unit'		=> 'px',
+							),
+						),
+						'imgicon_margin_right' => array(
+							'type'	=> 'unit',
+							'label'	=> __( 'Right', 'module-shivam' ),
+							'default'	=> '',
+							'placeholder'	=> 0,
+							'slider'		=> array(
+								'px'	=> array(
+									'min' => 0,
+									'max' => 1000,
+									'step' => 10,
+								),
+							),
+							'units' => array( 'px' ),
+							'preview' => array(
+								'type'	=> 'css',
+								'selector' => '.sr-imgicon-wrap',
+								'property'	=> 'margin-right',
+								'unit'		=> 'px',
 							),
 						),
 					),
@@ -274,7 +374,7 @@
 						),
 						'heading_margin_bottom' => array(
 							'type'	=> 'unit',
-							'label'	=> __( 'bottom', 'module-shivam' ),
+							'label'	=> __( 'Bottom', 'module-shivam' ),
 							'default'	=> '',
 							'placeholder'	=> 0,
 							'slider'		=> array(
@@ -319,7 +419,7 @@
 						),
 						'description_margin_bottom' => array(
 							'type'	=> 'unit',
-							'label'	=> __( 'Top', 'module-shivam' ),
+							'label'	=> __( 'Bottom', 'module-shivam' ),
 							'default'	=> '',
 							'placeholder'	=> 0,
 							'slider'		=> array(
