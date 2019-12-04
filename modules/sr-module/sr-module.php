@@ -35,7 +35,7 @@
 					'fields'		=> array(
 						'heading'          => array(
 							'type'        => 'text',
-							'label'       => __( 'Title', 'sr-module' ),
+							'label'       => __( 'Title', 'module-shivam' ),
 							'default'     => '',
 							'connections' => array( 'string', 'html' ),
 							'preview'     => array(
@@ -233,8 +233,8 @@
 		'style'		=> array(
 			'title'		=> __( 'Style', 'module-shivam' ),
 			'sections'	=> array(
-				'background_color'	=> array(
-					'title'	 => __( 'Background Color', 'module-shivam' ),
+				'container_style'	=> array(
+					'title'	 => __( 'Container Style', 'module-shivam' ),
 					'fields'	=> array(
 						'bg_color' => array(
 							'type' => 'color',
@@ -243,14 +243,27 @@
 							'show_reset' => true,
 							'preview'	=> array(
 								'type'	=> 'css',
-								'selector' => '.main-box',
+								'selector' => '.sr-box',
 								'property' => 'background',
+							),
+						),
+						'sr_padding'  => array(
+							'type'       => 'dimension',
+							'label'      => __( 'Padding', 'module-shivam' ),
+							'slider'     => true,
+							'responsive' => true,
+							'units'      => array( 'px' ),
+							'preview'    => array(
+								'type'     => 'css',
+								'selector' => '.sr-box',
+								'property' => 'padding',
+								'unit'     => 'px',
 							),
 						),
 					),
 				),
 				'pos_image_icon'	=> array(
-					'title'		=> __( 'Image / Icon  Alignment ', 'module-shivam' ),
+					'title'		=> __( 'Image / Icon  Position ', 'module-shivam' ),
 					'fields'	=> array(
 						'img_icon_position' => array(
 							'type'		=> 'select',

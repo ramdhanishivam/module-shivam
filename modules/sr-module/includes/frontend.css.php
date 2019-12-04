@@ -7,18 +7,24 @@
 ?>
 
 <?php if ($settings->img_icon_position === 'left' ) { ?>
-	.fl-node-<?php echo $id; ?> .main-box  .<?php echo $settings->img_icon_position; ?> {
+	.fl-node-<?php echo $id; ?> .sr-box  .sr-<?php echo $settings->img_icon_position; ?> {
 	display: flex;
 }
 <?php } ?>
 
 <?php if ($settings->img_icon_position === 'right' ) { ?>
-	.fl-node-<?php echo $id; ?> .main-box  .<?php echo $settings->img_icon_position; ?> {
+	.fl-node-<?php echo $id; ?> .sr-box  .sr-<?php echo $settings->img_icon_position; ?> {
 	display: flex;
 	flex-flow: row-reverse;
 }
 <?php } ?>
 
+.fl-node-<?php echo $id; ?> .sr-box {
+padding-top: <?php echo $settings->sr_padding_top; ?>px;
+padding-right: <?php echo $settings->sr_padding_right; ?>px;
+padding-bottom: <?php echo $settings->sr_padding_bottom; ?>px;
+padding-left: <?php echo $settings->sr_padding_left; ?>px;
+}
 
 .fl-node-<?php echo $id; ?> .sr-heading-wrap <?php echo $settings->tag_select; ?> {
 margin-top: <?php echo $settings->heading_margin_top; ?>px;
@@ -40,7 +46,7 @@ margin-right: <?php echo $settings->imgicon_margin_right; ?>px;
 <?php
 
 FLBuilderCSS::rule( array(
-	'selector'	=> ".fl-node-$id .main-box",
+	'selector'	=> ".fl-node-$id .sr-box",
 	'props'		=> array(
 		'background-color'	=> $settings->bg_color,
 	),
