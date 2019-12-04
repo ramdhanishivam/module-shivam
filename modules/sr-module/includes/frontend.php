@@ -5,7 +5,7 @@
  * @package Module Shivam
  */
 ?>
-<div class="main-box <?php echo($settings->img_icon_position);	 ?>">
+<div class="sr-box sr-<?php echo($settings->img_icon_position);	 ?>">
 	<div class="sr-imgicon-wrap">
 		<?php if ( !empty($settings->photo_src)) { ?>
 			<div class="sr-image-wrap">
@@ -20,7 +20,7 @@
 			</div>
 		<?php }  ?>
 	</div>
-	<div class="main-box-content">
+	<div class="sr-box-content">
 		<div class="sr-heading-wrap">
 			<?php echo '<' . $settings->tag_select .  ' class="sr-heading"> ';
 			echo $settings->heading;
